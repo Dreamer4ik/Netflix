@@ -40,10 +40,7 @@ class MainTabBarViewController: UITabBarController {
         nav3.tabBarItem = UITabBarItem(title: "Top Search", image: UIImage(systemName: "magnifyingglass"), tag: 3)
         nav4.tabBarItem = UITabBarItem(title: "Downloads", image: UIImage(systemName: "arrow.down.to.line"), tag: 4)
         
-        nav1.navigationBar.tintColor = .label
-        nav2.navigationBar.tintColor = .label
-        nav3.navigationBar.tintColor = .label
-        nav4.navigationBar.tintColor = .label
+        tabBar.tintColor = .label
         
         setViewControllers([nav1, nav2, nav3, nav4], animated: false)
     }
