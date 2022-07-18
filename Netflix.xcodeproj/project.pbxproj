@@ -18,6 +18,7 @@
 		DF5366F42885503900C07F42 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F32885503900C07F42 /* UpcomingViewController.swift */; };
 		DF5366F62885505800C07F42 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F52885505800C07F42 /* SearchViewController.swift */; };
 		DF5366F82885507E00C07F42 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F72885507E00C07F42 /* DownloadsViewController.swift */; };
+		DFB714052885B85800A87FBC /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB714042885B85800A87FBC /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DF5366F32885503900C07F42 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		DF5366F52885505800C07F42 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DF5366F72885507E00C07F42 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		DFB714042885B85800A87FBC /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2E921C28855E38008E651D /* CollectionViewTableViewCell.swift */,
+				DFB714042885B85800A87FBC /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF5366F62885505800C07F42 /* SearchViewController.swift in Sources */,
+				DFB714052885B85800A87FBC /* HeroHeaderUIView.swift in Sources */,
 				DF2E921F28856466008E651D /* Extensions.swift in Sources */,
 				DF5366E128854E7300C07F42 /* MainTabBarViewController.swift in Sources */,
 				DF2E921D28855E38008E651D /* CollectionViewTableViewCell.swift in Sources */,

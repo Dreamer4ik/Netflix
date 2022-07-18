@@ -23,16 +23,18 @@ class MainTabBarViewController: UITabBarController {
         let vc3 = SearchViewController()
         let vc4 = DownloadsViewController()
         
-        vc1.title = "Home"
-        vc2.title = "Notifications"
-        vc3.title = "Profile"
-        vc4.title = "Profile"
+        vc2.title = "Coming Soon"
+        vc3.title = "Top Search"
+        vc4.title = "Downloads"
         
+        vc4.navigationItem.largeTitleDisplayMode = .always
         
         let nav1 = UINavigationController(rootViewController: vc1)
         let nav2 = UINavigationController(rootViewController: vc2)
         let nav3 = UINavigationController(rootViewController: vc3)
         let nav4 = UINavigationController(rootViewController: vc4)
+        
+        nav4.navigationBar.prefersLargeTitles = true
         
         
         nav1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
@@ -40,7 +42,9 @@ class MainTabBarViewController: UITabBarController {
         nav3.tabBarItem = UITabBarItem(title: "Top Search", image: UIImage(systemName: "magnifyingglass"), tag: 3)
         nav4.tabBarItem = UITabBarItem(title: "Downloads", image: UIImage(systemName: "arrow.down.to.line"), tag: 4)
         
+        
         tabBar.tintColor = .label
+        tabBar.backgroundColor = .clear
         
         setViewControllers([nav1, nav2, nav3, nav4], animated: false)
     }
