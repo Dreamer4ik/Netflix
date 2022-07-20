@@ -18,6 +18,7 @@
 		DF5366F42885503900C07F42 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F32885503900C07F42 /* UpcomingViewController.swift */; };
 		DF5366F62885505800C07F42 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F52885505800C07F42 /* SearchViewController.swift */; };
 		DF5366F82885507E00C07F42 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F72885507E00C07F42 /* DownloadsViewController.swift */; };
+		DFB48995288827C200097B32 /* LogoPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB48994288827C200097B32 /* LogoPresentViewController.swift */; };
 		DFB714052885B85800A87FBC /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB714042885B85800A87FBC /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		DF5366F32885503900C07F42 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		DF5366F52885505800C07F42 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DF5366F72885507E00C07F42 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		DFB48994288827C200097B32 /* LogoPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPresentViewController.swift; sourceTree = "<group>"; };
 		DFB714042885B85800A87FBC /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				DF5366F52885505800C07F42 /* SearchViewController.swift */,
 				DF5366F72885507E00C07F42 /* DownloadsViewController.swift */,
 				DF5366E028854E7300C07F42 /* MainTabBarViewController.swift */,
+				DFB48994288827C200097B32 /* LogoPresentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				DF5366DF28854E7300C07F42 /* SceneDelegate.swift in Sources */,
 				DF5366F42885503900C07F42 /* UpcomingViewController.swift in Sources */,
 				DF5366F22885501000C07F42 /* HomeViewController.swift in Sources */,
+				DFB48995288827C200097B32 /* LogoPresentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
