@@ -1,5 +1,5 @@
 //
-//  HeroHeaderUIView.swift
+//  HeroHeader.swift
 //  Netflix
 //
 //  Created by Ivan Potapenko on 18.07.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroHeaderUIView: UIView {
+class HeroHeader: UIView {
     
     private let playButton: UIButton = {
         let button = UIButton()

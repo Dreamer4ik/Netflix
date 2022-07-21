@@ -9,11 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles: [String] = ["Trending Movies","Popular", "Trending Tv", "Upcoming Movies", "Top rated"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top rated"]
 
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        table.register(TableHeader.self, forHeaderFooterViewReuseIdentifier: TableHeader.identifier)
         return table
     }()
     
@@ -27,8 +28,10 @@ class HomeViewController: UIViewController {
         
         configureNavBar()
         
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.width, height: 500))
+        let headerView = HeroHeader(frame: CGRect(x: 0, y: 0, width: view.width, height: 500))
         homeFeedTable.tableHeaderView = headerView
+        
+        fetchData()
     }
     
     private func configureNavBar() {
@@ -46,7 +49,57 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
-
+    
+    private func fetchData() {
+//        APICaller.shared.getTrendingMovies { results in
+//            switch results {
+//            case .success(let movies):
+//                print(movies)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+//        APICaller.shared.getTrendingTvs { results in
+//            switch results {
+//            case .success(_):
+//                print(results)
+//                break
+//            case .failure(_):
+//                break
+//            }
+//        }
+        
+//        APICaller.shared.getUpcomingMovies { results in
+//            switch results {
+//            case .success(_):
+//                print(results)
+//                break
+//            case .failure(_):
+//                break
+//            }
+//        }
+        
+//        APICaller.shared.getPopularMovies { results in
+//            switch results {
+//            case .success(_):
+//                print(results)
+//                break
+//            case .failure(_):
+//                break
+//            }
+//        }
+        
+        APICaller.shared.getTopRated { results in
+            switch results {
+            case .success(_):
+                print(results)
+                break
+            case .failure(_):
+                break
+            }
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -77,18 +130,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 40
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else {
-            return
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TableHeader.identifier) as? TableHeader else {
+            return UIView()
         }
-        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-        header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.localizedCapitalized
-        header.textLabel?.textAlignment = .left
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section]
+        header.configure(with: sectionTitles[section].capitalizeFirstLetter())
+        return header
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
