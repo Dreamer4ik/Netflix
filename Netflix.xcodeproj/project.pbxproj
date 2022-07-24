@@ -23,6 +23,7 @@
 		DF5366F82885507E00C07F42 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5366F72885507E00C07F42 /* DownloadsViewController.swift */; };
 		DF63423F288971F000F886E5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63423E288971F000F886E5 /* APICaller.swift */; };
 		DF6342412889785F00F886E5 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6342402889785F00F886E5 /* Title.swift */; };
+		DF87D981288D447500662C4F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D980288D447500662C4F /* SearchResultsViewController.swift */; };
 		DFAB1513288C00730090E62F /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB1512288C00730090E62F /* UpcomingTableViewCell.swift */; };
 		DFAB1515288C036D0090E62F /* UpcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB1514288C036D0090E62F /* UpcomingViewModel.swift */; };
 		DFB48995288827C200097B32 /* LogoPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB48994288827C200097B32 /* LogoPresentViewController.swift */; };
@@ -49,6 +50,7 @@
 		DF5366F72885507E00C07F42 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		DF63423E288971F000F886E5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		DF6342402889785F00F886E5 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		DF87D980288D447500662C4F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		DFAB1512288C00730090E62F /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
 		DFAB1514288C036D0090E62F /* UpcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewModel.swift; sourceTree = "<group>"; };
 		DFB48994288827C200097B32 /* LogoPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPresentViewController.swift; sourceTree = "<group>"; };
@@ -168,14 +170,31 @@
 		DF5366F028854FF400C07F42 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF87D983288D44EF00662C4F /* General */,
+				DF87D982288D44D500662C4F /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DF87D982288D44D500662C4F /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				DF5366F12885501000C07F42 /* HomeViewController.swift */,
 				DF5366F32885503900C07F42 /* UpcomingViewController.swift */,
 				DF5366F52885505800C07F42 /* SearchViewController.swift */,
 				DF5366F72885507E00C07F42 /* DownloadsViewController.swift */,
 				DF5366E028854E7300C07F42 /* MainTabBarViewController.swift */,
-				DFB48994288827C200097B32 /* LogoPresentViewController.swift */,
 			);
-			path = Controllers;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DF87D983288D44EF00662C4F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DFB48994288827C200097B32 /* LogoPresentViewController.swift */,
+				DF87D980288D447500662C4F /* SearchResultsViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +318,7 @@
 				DF2E921D28855E38008E651D /* CollectionViewTableViewCell.swift in Sources */,
 				DF5366F82885507E00C07F42 /* DownloadsViewController.swift in Sources */,
 				DF2C8FA32889CBE300882A7D /* TableHeader.swift in Sources */,
+				DF87D981288D447500662C4F /* SearchResultsViewController.swift in Sources */,
 				DFAB1515288C036D0090E62F /* UpcomingViewModel.swift in Sources */,
 				DF5366DD28854E7300C07F42 /* AppDelegate.swift in Sources */,
 				DF63423F288971F000F886E5 /* APICaller.swift in Sources */,

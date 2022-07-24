@@ -12,6 +12,9 @@ class UpcomingTableViewCell: UITableViewCell {
 
     private let posterImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.masksToBounds = true
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 8
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -33,7 +36,7 @@ class UpcomingTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-        clipsToBounds = true
+        contentView.clipsToBounds = true
         contentView.addSubview(posterImageView)
         contentView.addSubview(posterLabel)
         contentView.addSubview(playButton)
@@ -46,10 +49,10 @@ class UpcomingTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         posterImageView.frame = CGRect(
-            x: 5,
-            y: 2,
-            width: 100,
-            height: height
+            x: separatorInset.left,
+            y: 5,
+            width: contentView.width/4,
+            height: contentView.height - 10
         )
         posterLabel.frame = CGRect(
             x: posterImageView.right + 20,

@@ -24,10 +24,11 @@ class MainTabBarViewController: UITabBarController {
         let vc4 = DownloadsViewController()
         
         vc2.title = "Coming Soon"
-        vc3.title = "Top Search"
+        vc3.title = "Search"
         vc4.title = "Downloads"
         
         vc2.navigationItem.largeTitleDisplayMode = .always
+        vc3.navigationItem.largeTitleDisplayMode = .always
         vc4.navigationItem.largeTitleDisplayMode = .always
         
         let nav1 = UINavigationController(rootViewController: vc1)
@@ -36,6 +37,7 @@ class MainTabBarViewController: UITabBarController {
         let nav4 = UINavigationController(rootViewController: vc4)
         
         nav2.navigationBar.prefersLargeTitles = true
+        nav3.navigationBar.prefersLargeTitles = true
         nav4.navigationBar.prefersLargeTitles = true
         
         
