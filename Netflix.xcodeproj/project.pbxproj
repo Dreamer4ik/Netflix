@@ -29,6 +29,8 @@
 		DFAB1515288C036D0090E62F /* UpcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB1514288C036D0090E62F /* UpcomingViewModel.swift */; };
 		DFB48995288827C200097B32 /* LogoPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB48994288827C200097B32 /* LogoPresentViewController.swift */; };
 		DFB714052885B85800A87FBC /* HeroHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB714042885B85800A87FBC /* HeroHeader.swift */; };
+		DFD7C719289685F500DB4845 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7C718289685F500DB4845 /* TitlePreviewViewController.swift */; };
+		DFD7C71B2896880500DB4845 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7C71A2896880500DB4845 /* TitlePreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		DFAB1514288C036D0090E62F /* UpcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewModel.swift; sourceTree = "<group>"; };
 		DFB48994288827C200097B32 /* LogoPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPresentViewController.swift; sourceTree = "<group>"; };
 		DFB714042885B85800A87FBC /* HeroHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeader.swift; sourceTree = "<group>"; };
+		DFD7C718289685F500DB4845 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		DFD7C71A2896880500DB4845 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 		F4FA09D3FDDFF9C36084E4F5 /* Pods-Netflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix.release.xcconfig"; path = "Target Support Files/Pods-Netflix/Pods-Netflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				DFAB1514288C036D0090E62F /* UpcomingViewModel.swift */,
+				DFD7C71A2896880500DB4845 /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			children = (
 				DFB48994288827C200097B32 /* LogoPresentViewController.swift */,
 				DF87D980288D447500662C4F /* SearchResultsViewController.swift */,
+				DFD7C718289685F500DB4845 /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD7C71B2896880500DB4845 /* TitlePreviewViewModel.swift in Sources */,
 				DF5366F62885505800C07F42 /* SearchViewController.swift in Sources */,
 				DFB714052885B85800A87FBC /* HeroHeader.swift in Sources */,
 				DF2E921F28856466008E651D /* Extensions.swift in Sources */,
@@ -326,6 +333,7 @@
 				DFAB1515288C036D0090E62F /* UpcomingViewModel.swift in Sources */,
 				DF5366DD28854E7300C07F42 /* AppDelegate.swift in Sources */,
 				DF63423F288971F000F886E5 /* APICaller.swift in Sources */,
+				DFD7C719289685F500DB4845 /* TitlePreviewViewController.swift in Sources */,
 				DF6342412889785F00F886E5 /* Title.swift in Sources */,
 				DF5366DF28854E7300C07F42 /* SceneDelegate.swift in Sources */,
 				DFAB1513288C00730090E62F /* UpcomingTableViewCell.swift in Sources */,
