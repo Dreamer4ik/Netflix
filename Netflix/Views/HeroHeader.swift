@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HeroHeader: UIView {
     
@@ -27,7 +28,7 @@ class HeroHeader: UIView {
         return button
     }()
     
-    private let heroImageView: UIView = {
+    private let heroImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -73,5 +74,12 @@ class HeroHeader: UIView {
             width: 120,
             height: 30
         )
+    }
+    
+    public func configure(with model: UpcomingViewModel) {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model.posterURL)") else {
+            return
+        }
+        heroImageView.sd_setImage(with: url, completed: nil)
     }
 }
