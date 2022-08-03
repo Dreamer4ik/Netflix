@@ -7,8 +7,11 @@
 
 import UIKit
 import WebKit
+import TransitionButton
 
 class TitlePreviewViewController: UIViewController {
+    
+    private let item:Title
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -23,13 +26,14 @@ class TitlePreviewViewController: UIViewController {
         return label
     }()
     
-    private let downloadButton: UIButton = {
-        let button = UIButton()
+    private let downloadButton: TransitionButton = {
+        let button = TransitionButton()
         button.backgroundColor = .red
         button.setTitle("Download", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 12
         button.layer.masksToBounds = true
+        button.spinnerColor = .white
         return button
     }()
     
@@ -38,7 +42,16 @@ class TitlePreviewViewController: UIViewController {
         
         return view
     }()
-
+    
+    init(item: Title) {
+          self.item = item
+          super.init(nibName: nil, bundle: nil)
+      }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -46,6 +59,30 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(overviewLabel)
         view.addSubview(downloadButton)
+        downloadButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+    }
+    
+    @objc private func didTapButton() {
+        downloadButton.startAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+            self.downloadButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1) {
+                self.downloadTitle()
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.05) {
+                    self.tabBarController?.selectedIndex = 3
+                }
+            }
+        }
+    }
+    
+    private func downloadTitle() {
+        DataPersistenceManager.shared.downloadTitle(with: item) { result in
+            switch result {
+            case .success():
+                NotificationCenter.default.post(name: Notification.Name("downloaded"), object: nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {

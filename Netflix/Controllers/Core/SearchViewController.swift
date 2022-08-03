@@ -120,11 +120,12 @@ extension SearchViewController: UISearchResultsUpdating, SearchResultsViewContro
             switch result {
             case .success(let videoElement):
                 DispatchQueue.main.async {
-                    let vc = TitlePreviewViewController()
-                    vc.configure(with: TitlePreviewViewModel(title: titleName,
-                                                             youtubeView: videoElement,
-                                                             titleOverview: title.overview ?? ""))
-                    self?.navigationController?.pushViewController(vc, animated: true)
+//                    FixMe
+//                    let vc = TitlePreviewViewController()
+//                    vc.configure(with: TitlePreviewViewModel(title: titleName,
+//                                                             youtubeView: videoElement,
+//                                                             titleOverview: title.overview ?? ""))
+//                    self?.navigationController?.pushViewController(vc, animated: true)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
@@ -134,9 +135,10 @@ extension SearchViewController: UISearchResultsUpdating, SearchResultsViewContro
     
     func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel) {
         DispatchQueue.main.async { [weak self] in
-            let vc = TitlePreviewViewController()
-            vc.configure(with: viewModel)
-            self?.navigationController?.pushViewController(vc, animated: true)
+//            FixMe
+//            let vc = TitlePreviewViewController()
+//            vc.configure(with: viewModel)
+//            self?.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

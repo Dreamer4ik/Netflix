@@ -80,7 +80,7 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
             switch result {
             case .success(let videoElement):
                 DispatchQueue.main.async {
-                    let vc = TitlePreviewViewController()
+                    let vc = TitlePreviewViewController(item: title)
                     vc.configure(with: TitlePreviewViewModel(title: titleName,
                                                              youtubeView: videoElement,
                                                              titleOverview: title.overview ?? ""))

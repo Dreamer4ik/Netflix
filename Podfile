@@ -8,5 +8,7 @@ target 'Netflix' do
   # Pods for Netflix
 
 pod 'SDWebImage'
+pod 'TransitionButton'
+
 
 end
