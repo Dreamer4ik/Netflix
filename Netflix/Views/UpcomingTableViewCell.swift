@@ -54,11 +54,13 @@ class UpcomingTableViewCell: UITableViewCell {
             width: contentView.width/4,
             height: contentView.height - 10
         )
+        
+        let sizeHeightLabel: CGFloat = contentView.height/2
         posterLabel.frame = CGRect(
             x: posterImageView.right + 20,
-            y: contentView.height/2 - posterLabel.height/2,
+            y: contentView.height/2 - sizeHeightLabel/2,
             width: contentView.width-posterImageView.right-15 - playButton.width - 10,
-            height: contentView.height/2
+            height: sizeHeightLabel
         )
         
         playButton.frame = CGRect(
